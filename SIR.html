@@ -1,0 +1,61 @@
+<html>
+<head>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+<link rel="stylesheet" href="Stile.css">
+</head>
+<body>
+
+    <br>
+    <br>
+
+    <div class = "Titolo">
+        <i><b><h1><p><u>Grafico interattivo del modello SIR</u></p></h></b></i>
+    </div>
+
+    <div class="Grafico">
+        <div>
+            <canvas id="chart" width="1200" height="600">
+            </canvas>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div style="display:flex; flex-direction: row; justify-content: center; align-items: center; gap: 15px">
+    <div>
+        <label for="xi">&xi;:</label>
+        <input type="range" min="0" max="1" step="0.05" id="xi" class="inputs" value="0.35" title="Tasso di infezione">
+        <span id="xiTesto"></span>
+    </div>
+    <div>
+        <label for="eta">&eta;:</label>
+        <input type="range" min="0" max="1" step="0.05" id="eta" class="inputs" value="0.1" title="Tasso di rimozione">
+        <span id="etaTesto"></span>
+    </div>
+
+    <div>
+        <label for="I0">I<sub>0</sub>:</label>
+        <input type="number" class="inputs" id="I0" value=100 min=1 title="Popolazione iniziale infetta">
+    </div>
+    <div>
+        <label for="N">N:</label>
+        <input type="number" id="N" class="inputs" value=10000 min=0 title="Numero totale di individui">
+    </div>
+    <div>
+        <label for="delt">&Delta;t:</label>
+        <input type="number" id="delT" class="inputs" value=0.05 min=0.001 max=1 step=0.001 title="Intervallo di tempo tra le approssimazioni">
+    </div>
+    <div>
+        <label for="maxTime">Tempo massimo:</label>
+        <input type="number" id="maxTime" class="inputs" value=50 title="Tempo massimo di simulazione">
+    </div>
+
+    <div id="R0Testo" title="Numero di riproduzione base">
+        <a href="https://en.wikipedia.org/wiki/Basic_reproduction_number" style="text-decoration:none;">R<sub>0</sub>:</a>
+    </div>
+
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+.Titolo{
+
+    position: relative;
+    text-align: center;
+    font-family: calibri;
+    color: red;
+
+}
+
+.Grafico{
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
